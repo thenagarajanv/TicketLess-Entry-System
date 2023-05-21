@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    background-image: url('https://wallpaperaccess.com/full/133836.jpg');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+}
+
+.container{
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0,0,0,0.048), 0 12.8px 10.5px rgba(0,0,0,0.58) ;
+    width: 550px;
+    max-width: 100%;
+}
+
+.header{ 
+    background:linear-gradient(45deg, rgb(141, 185, 82), rgb(66, 143, 194));
+    padding: 30px 0;
+}
+
+.header h2{
+    color: #000;
+    font-size: 26px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.form{
+    padding: 40px;
+}
+
+.form-control{
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.form-control label{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.form-control input,select{
+    width: 100%;
+    border: 2px solid #f0f0f0;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 12px;
+    display: block;
+}
+
+.form-control input:focus, select:focus{
+    outline: 0;
+    border-color: #777;
+}
+
+.form-control.success input{
+    border-color: #39df7e;
+}
+
+.form-control.error input{
+    border-color: #df3434;
+}
+
+.form-control i {
+    position: absolute;
+    right: 12px;
+    top: 40px;
+    visibility: hidden;
+}
+
+.form-control.error small{
+    visibility: visible;
+}
+
+.form-control small{
+    color: #df3434;
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control.success i.fa-check-circle{
+    color: #39df7e;
+    visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle{
+    color: #df3434;
+    visibility: visible;
+}
+
+.form .btn{
+    background:linear-gradient(45deg, rgb(59, 133, 173), rgb(121, 188, 59));
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    display: block;
+    font-size: 16px;
+    padding: 15px 0;
+    margin-top: 15px;
+    width: 100%;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.form .btn:hover{
+    background:linear-gradient(45deg, rgb(172, 60, 155), rgb(227, 147, 50));
+}
+
+
+table{
+	margin: 0.5rem auto;
+}
+
+h2 {
+	text-align: center;
+}
+
+span {
+    display: flex;
+    justify-content: center;
+}
+
+label.required::after {
+    content: '*';
+    margin-right: 4px;
+    color: red;
+}
+
+.optional{
+    padding: 20px;
+}

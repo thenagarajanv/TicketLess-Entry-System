@@ -1,0 +1,130 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iTiko</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+        crossorigin="anonymous" />
+        
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>iTiko TicketLess Entry System</h2>
+            <h2>Enter Your Ticket Details</h2>
+        </div>
+    <form action="card.html" class="form" id="form" name="submit-to-google-sheet" onsubmit="return validateAndSubmit()">
+        
+        <table>
+            <tr class="form-control">
+                <td><label class="required"><b>Museum/Monuments:</b></label></td>
+                <td>
+                    <select id="museum" onchange="handleMuseum(value)" required>
+                        <option value="">Select</option>
+                        <option value="Gedee Car Museum, Coimbatore">Gedee Car Museum, Coimbatore</option>
+                        <option value="St. George's Fort, Chennai">St. George's Fort, Chennai</option>
+                        <option value="Salem Witch Museum, Salem">Salem Witch Museum, Salem</option>
+                        <option value="Meenakshi Amman Temple, Madurai">Meenakshi Amman Temple, Madurai</option>
+                        <option value="Airavateswara Temple, Thanjavur">Airavateswara Temple, Thanjavur</option>
+                        <option value="Brahmapureeswarar Temple, Trichy">Brahmapureeswarar Temple, Trichy</option>
+                        <option value="Tipu Sultan's Fort and Palace, Banglore">Tipu Sultan's Fort and Palace, Banglore</option>
+                        <option value="Lalithamahal Palace, Mysore">Lalithamahal Palace, Mysore</option>
+                        <option value="Qutub Shahi Tombs, Hyderabad">Qutub Shahi Tombs, Hyderabad</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="form-control">
+                <td><label class="required"><b>Name:</b></label></td>
+                <td>
+                    <input type="text" id="names" pattern="[A-Za-z]+" onchange="handleNames(value)"/>
+                </td>
+            </tr>
+            <tr class="form-control">
+                <td><label class="required"><b>Email:</b></label></td>
+                <td>
+                    <input type="email" id="email" onchange="handleEmail(value)"/>
+                </td>
+            </tr>
+            <tr class="form-control">
+                <td><label class="required"><b>Phone No.:</b></label></td>
+                <td>
+                    <input type="tel" id="phoneNo" minlength="5" pattern="[0-9]+" onchange="handlePhoneNo(value)"/>
+                </td>
+            </tr>
+            <tr class="form-control">
+                <td><label class="required"><b>Gender:</b></label></td>
+                <td>
+                    <label><input onchange="handleGenders(this)" type="radio" id="male" name="gender" value="male">
+                    Male</label>
+                    &nbsp;&nbsp;&nbsp;
+                    <label><input onchange="handleGenders(this)" type="radio" id="female" name="gender" value="female">
+                    Female</label><br>
+                </td>
+            </tr>
+            <!-- <tr class="form-control">
+                <td colspan="2"><span class="optional">PERSON DETAILS</span></td>
+            </tr> -->
+            <tr class="form-control">
+                <td><label class="required"><b>Adults:</b></label></td>
+                <td>
+                    <select id="adults" onchange="handleAdults(value)" required>
+                        <!-- <option value="">Select</option> -->
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="form-control">
+                <td><label class=""><b>Children:</b></label></td>
+                <td>
+                    <select id="children" onchange="handleChildren(value)">
+                        <option value="0">Select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="form-control">
+                <td><label class=""><b>Adult fare: </b></label></td>
+                <td><span>₹50/adult</span></td>
+            </tr>
+            <tr class="form-control">
+                <td><label class=""><b>Children fare: </b></label></td>
+                <td><span>₹25/child</span></td>
+            </tr>
+            <tr class="form-control">
+                <td><label class=""><b>Total fare:</b></label></td>
+                <td><span id="totalFare"></span></td>
+            </tr>
+        </table>
+        
+        <span id="bttn">
+            <input type="submit" class="btn sbtn" id="sbtn">&nbsp;&nbsp;&nbsp;
+            <input type="reset" class="btn rbtn" id="rbtn">
+        </span>
+    </form>
+    
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

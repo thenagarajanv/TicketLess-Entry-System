@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iTiko</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css"
+        integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ=="
+        crossorigin="anonymous" />
+        
+    <link rel="stylesheet" type="text/css" href="view.css">  
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>View Ticket Details</h2>
+        </div>
+        <table>
+            <tr>
+                <td><b>Ticket Id:</b></td>
+                <td id="ticketId"></td>
+            </tr>
+            <tr>
+                <td><b>Museum:</b></td>
+                <td id="museum"></td>
+            </tr>
+            <tr>
+                <td><b>Name:</b></td>
+                <td id="names"></td>
+            </tr>
+            <tr>
+                <td><b>Email:</b></td>
+                <td id="email"></td>
+            </tr>
+            <tr>
+                <td><b>Phone No.:</b></td>
+                <td id="phoneNo"></td>
+            </tr>
+            <tr>
+                <td><b>Gender:</b></td>
+                <td id="gender"></td>
+            </tr>
+            <tr>
+                <td><b>Adults count:</b></td>
+                <td id="adults"></td>
+            </tr>
+            <tr>
+                <td><b>Children count:</b></td>
+                <td id="children"></td>
+            </tr>
+            <tr>
+                <td><b>Total fare:</b></td>
+                <td id="total"></td>
+            </tr>
+        </table>
+        <div class="qr">
+            <img id="img" src="" alt=""> 
+        </div>
+        <div class="footer">
+            <h2>PAYMENT SUCCESSFULLY COMPLETED
+                PLEASE TAKE A SCREENSHOT OF THIS PAGE WHILE YOU VISIT!
+                THANK YOU
+            </h2>
+        </div>
+        <br/>
+    
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="view.js"></script>
+</body>
+</html>
