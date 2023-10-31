@@ -1,6 +1,6 @@
 # TicketLess-Entry-System
 
-Visit Website https://itiko.netlify.app/
+Visit Website : https://itikco.netlify.app/
 
 TicketLess Entry System 👍
 
